@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useCreateUserWithEmailAndPassword, useUpdateProfile } from 'react-firebase-hooks/auth';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import auth from '../../../firebase.init';
 import Loading from '../../Shared/Loading/Loading';
 import SocialSignIN from '../SocialSignIN/SocialSignIN';
@@ -23,6 +23,9 @@ const Register = () => {
         navigate('/login');
     }
 
+    const location = useLocation();
+    let from = location.state?.from?.pathname || "/";
+
     if (loading || updating) {
         return <Loading></Loading>
     }
@@ -44,7 +47,7 @@ const Register = () => {
         await updateProfile({ displayName: name });
         console.log(email, password)
         console.log('Updated profile');
-        navigate('/home');
+        navigate(from, { replace: true });
     }
     return (
         <div className='register-form'>
