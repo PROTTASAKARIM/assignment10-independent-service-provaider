@@ -5,7 +5,11 @@ import Header from './Pages/Shared/Header/Header';
 import { Route, Routes } from 'react-router-dom';
 import Home from './Pages/Home/Home/Home';
 import About from './Pages/About/About';
-import Services from './Pages/Home/Services/Services';
+import ServiceDeatail from './Pages/Home/ServiceDetail/ServiceDeatail';
+import RequireAuth from './Pages/LogIn/RequireAuth/RequireAuth';
+import CheckOut from './Pages/CheckOut/CheckOut';
+import Login from './Pages/LogIn/Login/Login';
+import Register from './Pages/LogIn/Register/Register';
 
 function App() {
   return (
@@ -15,7 +19,14 @@ function App() {
         <Route path='/' element={<Home></Home>}></Route>
         <Route path='/home' element={<Home></Home>}></Route>
         <Route path='/about' element={<About></About>}></Route>
-        <Route path='/services' element={<Services></Services>}></Route>
+        <Route path='/login' element={<Login></Login>}></Route>
+        <Route path='/register' element={<Register></Register>}></Route>
+        <Route path='/service/:serviceId' element={<ServiceDeatail></ServiceDeatail>}></Route>
+        <Route path="/checkout" element={
+          <RequireAuth>
+            <CheckOut></CheckOut>
+          </RequireAuth>
+        }></Route>
 
       </Routes>
       <Footer></Footer>
