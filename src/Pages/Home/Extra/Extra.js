@@ -9,7 +9,7 @@ const Extra = () => {
                 <img src={mypic} alt="" />
                 <div className='container m-2'>
                     <h3>Contact Me</h3>
-                    <p>Hi I am Prottasa Karim.Please contact me If you want any think to in form. I am the owner of Dreamy Photography.</p>
+                    <p>Hi I am Prottasa Karim. Please contact me If you want any thing to inform. I am the owner of Dreamy Photography. </p>
                     <p>My mail address is prottasakarim99@gmail.com</p>
                 </div>
             </div>
