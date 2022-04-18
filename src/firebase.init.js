@@ -6,12 +6,12 @@ import { getAuth } from 'firebase/auth';
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-    apiKey: "AIzaSyAK_VmDZLX9cGEnst0jXRWAhEoa25kPNyE",
-    authDomain: "freelance-photographer.firebaseapp.com",
-    projectId: "freelance-photographer",
-    storageBucket: "freelance-photographer.appspot.com",
-    messagingSenderId: "458841820779",
-    appId: "1:458841820779:web:7569d77e092721fdcc2b2e"
+    apiKey: "AIzaSyAtPmHHxGx5QI6xTJv3kqkIZ0B2s9WKvCk",
+    authDomain: "dreamy-photographer.firebaseapp.com",
+    projectId: "dreamy-photographer",
+    storageBucket: "dreamy-photographer.appspot.com",
+    messagingSenderId: "212163313757",
+    appId: "1:212163313757:web:5e93146af38035545bcdb4"
 };
 
 // Initialize Firebase
