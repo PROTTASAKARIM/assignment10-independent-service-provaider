@@ -15,7 +15,7 @@ const Register = () => {
         loading,
         error,
     ] = useCreateUserWithEmailAndPassword(auth, { sendEmailVerification: true });
-    const [updateProfile, updating, updateError] = useUpdateProfile(auth);
+    // const [updateProfile, updating, updateError] = useUpdateProfile(auth);
 
     const navigate = useNavigate();
 
@@ -26,15 +26,13 @@ const Register = () => {
     const location = useLocation();
     let from = location.state?.from?.pathname || "/";
 
-    if (loading || updating) {
+    if (loading) {
         return <Loading></Loading>
     }
 
     if (user) {
-        console.log('user', user);
+        navigate(from, { replace: true });
     }
-
-
 
     const handleRegister = async (event) => {
         event.preventDefault();
@@ -44,7 +42,7 @@ const Register = () => {
 
 
         await createUserWithEmailAndPassword(email, password);
-        await updateProfile({ displayName: name });
+        // await updateProfile({ displayName: name });
         console.log(email, password)
         console.log('Updated profile');
         navigate(from, { replace: true });
@@ -66,6 +64,7 @@ const Register = () => {
                     type="submit"
                     value="Register" />
             </form>
+
             <p>Already have an account? <Link to="/login" className='text-primary pe-auto text-decoration-none' onClick={navigateLogin}>Please Login</Link> </p>
             <SocialSignIN></SocialSignIN>
         </div>
