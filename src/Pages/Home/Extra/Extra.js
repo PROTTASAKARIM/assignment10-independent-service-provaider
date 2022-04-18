@@ -5,8 +5,8 @@ const Extra = () => {
     return (
         <div className='container m-5'>
             <h1 className='m-5'>Hi I am the owner of the page</h1>
-            <div className='d-flex nm-2'>
-                <img src={mypic} alt="" />
+            <div className='d-lg-flex m-2'>
+                <img className='w-100' src={mypic} alt="" />
                 <div className='container m-2'>
                     <h3>Contact Me</h3>
                     <p>Hi I am Prottasa Karim. Please contact me If you want any thing to inform. I am the owner of Dreamy Photography. </p>
