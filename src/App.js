@@ -12,6 +12,7 @@ import Login from './Pages/LogIn/Login/Login';
 import Register from './Pages/LogIn/Register/Register';
 import NotFound from './Pages/NotFound/NotFound';
 import Blog from './Pages/Blogs/Blog';
+import ThankYou from './Pages/ThankYou/ThankYou';
 
 function App() {
   return (
@@ -31,6 +32,7 @@ function App() {
             <CheckOut></CheckOut>
           </RequireAuth>
         }></Route>
+        <Route path='/thankyou' element={<ThankYou></ThankYou>}></Route>
         <Route path='*' element={<NotFound></NotFound>}></Route>
 
       </Routes>
