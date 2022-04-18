@@ -6,6 +6,10 @@ My web site link is (https://dreamy-photographer.web.app/)
 * Login Sign up done
 * Blogs done
 * About done 
+* email varification done
+* password reset done 
+* home page responsive
+
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
