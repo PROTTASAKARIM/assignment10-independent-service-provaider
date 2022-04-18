@@ -1,4 +1,11 @@
 # Getting Started with Create React App
+My web site link is (https://dreamy-photographer.web.app/)
+
+* Home page done
+* Routes done
+* Login Sign up done
+* Blogs done
+* About done 
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
